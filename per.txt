@@ -1,0 +1,12 @@
+sudo useradd dean
+sudo useradd professor
+sudo useradd student
+
+# Create groups
+sudo groupadd professors
+sudo groupadd students
+
+# Add users to groups
+sudo usermod -aG professors professor
+sudo usermod -aG students student
+Assigning Ownership and Permissions
