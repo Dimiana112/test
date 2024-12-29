@@ -1,12 +1,15 @@
-sudo useradd dean
-sudo useradd professor
-sudo useradd student
+# Set ownership and permissions for 'dean' directory
+chown dean:dean dean
+chmod 770 dean
 
-# Create groups
-sudo groupadd professors
-sudo groupadd students
+# Set ownership and permissions for 'professors' directory
+chown dean:professors professors
+chmod 755 professors
 
-# Add users to groups
-sudo usermod -aG professors professor
-sudo usermod -aG students student
-Assigning Ownership and Permissions
+# Set ownership and permissions for 'students' directory
+chown dean:students students
+chmod 711 students
+
+# Set ownership and permissions for 'students/ayman' directory
+chown ayman:students students/ayman
+chmod 700 students/ayman
